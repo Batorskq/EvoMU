@@ -27,7 +27,6 @@ The current code includes entry points for TOFU, MUSE News, and MUSE Books. WMDP
 | `generate_books.py` | Generates and refines MUSE Books loss functions. |
 | `utils.py`, `utils_books.py` | Shared data loading, loss loading, LoRA merge, and evaluation helpers. |
 | `summarize.py` | Collects top runs and writes `results/final.txt`. |
-| `scripts/` | Slurm launchers for cluster runs. |
 | `ou/` | Nested Open-Unlearning evaluator used by the training scripts. |
 | `tofu_data/` | Local TOFU JSON/JSONL splits. |
 | `muse_news_data/` | Local MUSE News forget/retain JSONL splits. |
@@ -36,7 +35,7 @@ The current code includes entry points for TOFU, MUSE News, and MUSE Books. WMDP
 
 ## Setup
 
-The code expects Python 3.11 and CUDA-capable GPUs. The provided Slurm scripts request two A100 GPUs and load CUDA 12.6.
+The code expects Python 3.11 and CUDA-capable GPUs.
 
 The WMDP-Bio JSONL files are large and are stored with Git LFS. Install Git LFS before cloning or pulling the repository:
 
