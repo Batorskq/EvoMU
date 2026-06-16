@@ -1,0 +1,21 @@
+# @package _global_
+
+defaults:
+  - override /model: Llama-2-7b-chat-hf
+  - override /eval: tofu
+
+forget_split: forget05
+holdout_split: holdout05
+retain_logs_path: null
+
+model:
+  model_args:
+    pretrained_model_name_or_path: open-unlearning/tofu_Llama-2-7b-chat-hf_retain95
+
+eval:
+  tofu:
+    forget_split: ${forget_split}
+    holdout_split: ${holdout_split}
+    retain_logs_path: ${retain_logs_path}
+
+task_name: ???

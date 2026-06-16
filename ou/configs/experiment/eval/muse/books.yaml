@@ -1,0 +1,24 @@
+# @package _global_
+
+defaults:
+  - override /model: Llama-2-7b-hf
+  - override /eval: muse
+
+data_split: Books
+retain_logs_path: null
+
+model:
+  model_args:
+    pretrained_model_name_or_path: muse-bench/MUSE-books_target
+    attn_implementation: sdpa
+
+  # The target repo may not ship tokenizer files; pin a known-good tokenizer
+  tokenizer_args:
+    pretrained_model_name_or_path: meta-llama/Llama-2-7b-hf
+
+eval:
+  muse:
+    data_split: ${data_split}
+    retain_logs_path: ${retain_logs_path}
+
+task_name: ???

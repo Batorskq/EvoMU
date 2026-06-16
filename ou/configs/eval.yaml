@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - model: Llama-2-7b-chat-hf
+  - eval: asd
+  - paths: default
+  - hydra: eval
+  - experiment: null
+
+model:
+  model_args:
+    device_map: cuda
+
+mode: eval
+task_name: ???
+seed: 0
